@@ -1,3 +1,4 @@
+
 n = int(input())
 c = list(range(1, n+1))
 
