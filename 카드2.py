@@ -1,10 +1,13 @@
+from collections import deque
 
 n = int(input())
-c = list(range(1, n+1))
+c = deque([])
 
-while (len(c) > 1):
-    c.append(0)
-    t = c.pop(0)
-    c.append(t)
+for i in range(1, n+1):
+    c.append(i)
 
-print(c.pop(0))
+while len(c) > 1:
+    c.popleft()
+    c.append(c.popleft())
+
+print(c[0])
