@@ -4,6 +4,8 @@ b = list(map(int, input().split()))
 S = 0
 
 for i in range(n):
-    S += a[i] * b[i]
-
+    S += min(a) * max(b)
+    a.pop(a.index(min(a)))
+    b.pop(b.index(max(b)))
+    
 print(S)
